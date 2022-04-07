@@ -117,7 +117,7 @@ class MovieDetailsViewController: UIViewController {
         let favouritesStar = UIImageView(image: UIImage(named: "favorites.svg"))
         imageView.addSubview(favouritesStar)
         favouritesStar.translatesAutoresizingMaskIntoConstraints = false
-        //favouritesStar.contentMode = .scaleAspectFill
+        //favouritesStar.contentMode = .scaleAspectFit
         NSLayoutConstraint.activate([
             favouritesStar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             favouritesStar.topAnchor.constraint(equalTo: descriptionOfFilm.bottomAnchor, constant: 20),
