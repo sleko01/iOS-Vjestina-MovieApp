@@ -98,7 +98,7 @@ class MovieDetailsViewController: UIViewController {
         descriptionOfFilm.font = UIFont(name: movieName.font.fontName, size: 15)
         descriptionOfFilm.textColor = .white
         descriptionOfFilm.text = "Action, Science Fiction, Adventure"
-        imageView.addSubview(descriptionOfFilm)
+        //imageView.addSubview(descriptionOfFilm)
         
         let lengthOfMovie = UILabel()
         lengthOfMovie.textColor = .white
@@ -112,6 +112,19 @@ class MovieDetailsViewController: UIViewController {
             lengthOfMovie.leadingAnchor.constraint(equalTo: descriptionOfFilm.trailingAnchor, constant: 2),
             lengthOfMovie.topAnchor.constraint(equalTo: view.topAnchor, constant: 253)
         ])
+        
+        //let favouritesStar = UIImageView(image: UIImage(systemName: "drugidan2.png"))
+        let favouritesStar = UIImageView(image: UIImage(named: "favorites.svg"))
+        imageView.addSubview(favouritesStar)
+        favouritesStar.translatesAutoresizingMaskIntoConstraints = false
+        //favouritesStar.contentMode = .scaleAspectFill
+        NSLayoutConstraint.activate([
+            favouritesStar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            favouritesStar.topAnchor.constraint(equalTo: descriptionOfFilm.bottomAnchor, constant: 20),
+            favouritesStar.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
+            favouritesStar.trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20)
+        ])
+        
         
         
         let lowerView = UIView(frame: CGRect(x: 0, y: self.view.frame.height/2, width: self.view.frame.width, height: self.view.frame.height / 2))
